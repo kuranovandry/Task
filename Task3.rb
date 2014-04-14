@@ -10,7 +10,6 @@ H = {'yes' => 23, 'b' => 'travel', 'yesterday' => 34, 5 => '234', :yesss => :fg,
 	                end
 	      new_value = case value
 	                  when Hash then value.symbolize_all_keys
-	                  when Array then value.map{ |v| v.is_a?(Hash) ? v.symbolize_all_keys : v }
 	                  else value
 	                  end
 	      result[new_key] = new_value
